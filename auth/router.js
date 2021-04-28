@@ -59,7 +59,7 @@ router.post('/login', (req, res) => {
 router.get('/logout', (req, res) => {
 	if (req.session) {
 		req.session.destroy((error) => {
-			if (err) {
+			if (error) {
 				res.status(500).json({
 					message: 'There was an error loggin you our, please try again',
 				});
